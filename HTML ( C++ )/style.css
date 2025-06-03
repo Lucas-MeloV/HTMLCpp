@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Eternal';
+    src: url('fonts/Eternal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(1, 0, 30);
+    color: #ffffff;
+}
+
+header {
+    background-color: rbg(1, 0, 30);
+}
+
+.nav-link {
+    color: white;
+    font-family: 'Eternal', sans-serif;
+}
+
+.full-header-carousel {
+    height: 35vw;
+    /* Mostra 70% da altura da tela */
+    position: relative;
+    overflow: hidden;
+    max-height: 600px;
+}
+
+.full-header-carousel .carousel-inner,
+.full-header-carousel .carousel-item {
+    height: 100%;
+}
+
+.full-header-carousel .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    /* Mostra a parte superior da imagem */
+}
+
+.full-header-carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(1, 0, 30), rgba(1, 0, 0, 0));
+    z-index: 1;
+}
+
+
+
+
+
+/* Mantém o conteúdo acima do gradiente */
+.full-header-carousel .carousel-inner {
+    position: relative;
+    z-index: 0;
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Eternal', sans-serif;
+    font-size: 3rem;
+    color: #cc00ff;
+}
+
+.card-title {
+    font-family: 'Eternal', sans-serif;
+    font-size: 1rem;
+    color: #00ffd5;
+}
+
+#character-container::-webkit-scrollbar {
+    display: none;
+}
+
+#character-container {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#prev-btn:focus,
+#prev-btn:focus-visible,
+#next-btn:focus,
+#next-btn:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
